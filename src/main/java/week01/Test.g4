@@ -1,5 +1,12 @@
 grammar Test;
 
+@members {
+  int cnt = 0;
+}
+
+
+init: ('hello' {cnt++;})+;
+
 start : 'hello' Name | code;
 
 code : stat | forloop | ifcon | while | comment;
@@ -26,4 +33,4 @@ while: 'while' '(' con ')' '{' code* '}';
 Name : [A-Za-z]+;
 Num : [0-9]+ ('.' [0-9]+)?;
 
-//WD: '\n\r\t ' -> skip;
+WD: [\n\r\t ] -> skip;
