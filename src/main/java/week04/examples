@@ -1,0 +1,62 @@
+
+xml example
+
+<students>
+	<student>
+		<age>15</age>
+		<name>mahmoud</name>
+		<courses>
+			<course>
+				<name>cs407</name>
+			</course>
+			<course>
+				<name>cs401</name>
+			</course>
+		</courses>
+	</student>
+	<student>
+		<age>25</age>
+		<name>mustafa</name>
+	</student>
+	<student>
+		<age>19</age>
+		<name>ali</name>
+	</student
+</students>
+
+json example
+
+{
+	"students": [
+		{
+			"age": 15,
+			"name": "mahmoud"
+			"courses": [
+				{
+					"name": "cs407"
+				},
+				{
+					"name": "cs401"
+				}
+			]
+		},
+		{
+			"age": 25,
+			"name": "mustafa"
+		},
+		{
+			"age": 19,
+			"name": "ali"
+		}
+	]
+}
+
+dot example
+
+digraph G {
+  rankdir=LR;
+  main [shape=box];
+  main -> f -> g; // main calls f which calls g
+  f -> f [style=dotted] ; // f is recursive
+  f -> h; // f calls h
+}
